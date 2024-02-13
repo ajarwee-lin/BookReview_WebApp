@@ -48,3 +48,23 @@ Before contributing, please read My Contributing Guide and Code of Conduct.
 ## License
 
 This project is licensed under the  BYUI License. See the LICENSE file for details.
+
+# Book Management Application
+
+This is a Node.js/Express application for managing books. It allows users to perform CRUD operations (Create, Read, Update, Delete) on books and add them to their favorites list.
+
+## Project Structure
+
+- `app.js`: This is the main entry point of the application where the Express server is configured. It sets up middleware, connects to the MongoDB database, and defines routes for handling HTTP requests.
+
+- `bookRoutes.js`: This file defines the routes related to book management using Express's Router. It includes endpoints for adding, updating, and deleting books.
+
+- `Book.js`: This file contains the Mongoose schema and model definition for the Book object. It specifies the structure of book documents in the MongoDB database and provides methods for interacting with the Book collection.
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd book-management-app

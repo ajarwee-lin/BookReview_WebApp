@@ -61,6 +61,8 @@ This is a Node.js/Express application for managing books. It allows users to per
 
 - `Book.js`: This file contains the Mongoose schema and model definition for the Book object. It specifies the structure of book documents in the MongoDB database and provides methods for interacting with the Book collection.
 
+- I just added a RESTful API for managing books, users, and reviews. It will provides endpoints for creating, reading, updating, and deleting books, as well as user authentication and review management.
+
 ## Installation
 
 1. Clone the repository:

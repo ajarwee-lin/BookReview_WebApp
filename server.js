@@ -1,3 +1,6 @@
+// Import dotenv
+require('dotenv').config();
+
 // Import dependencies
 const express = require('express');
 const mongoose = require('mongoose');
@@ -64,4 +67,32 @@ app.use('/api', bookRoutes);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
+});
+
+// Import necessary modules
+const { body } = require('express-validator');
+
+// Add validation middleware for the login route
+app.post('/api/v1/login',
+  [
+    // Validate username and password
+    body('username').notEmpty(),
+    body('password').notEmpty()
+  ],
+  async (req, res) => {
+    // Handle validation results
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    // Continue with login logic
+    // ...
+  }
+);
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
 });

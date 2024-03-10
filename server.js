@@ -96,3 +96,25 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
+
+// User registration route
+app.post('/api/v1/register', async (req, res) => {
+  // Handle user registration logic
+  // ...
+});
+// Logout route
+app.post('/api/v1/logout', (req, res) => {
+  // Handle user logout logic
+  // ...
+});
+// Route for retrieving a single book
+app.get('/api/v1/books/:id', (req, res) => {
+  // Handle retrieving a single book logic
+  // ...
+});
+
+// Route for searching books
+app.get('/api/v1/books/search', (req, res) => {
+  // Handle searching books logic
+  // ...
+});
